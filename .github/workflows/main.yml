@@ -1,0 +1,14 @@
+name: build
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [ wootz ]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+          fetch-depth: 0
+      - name: test
+        run: "echo 'test' > test"
